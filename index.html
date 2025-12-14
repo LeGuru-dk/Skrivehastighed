@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <title>Skrivehastighed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5faff, #e8f0fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #game-wrapper {
+            background: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 30px 40px;
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #333333;
+        }
+
+        #scoreboard {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        #word-container {
+            position: relative;
+            height: 80px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .moving-word {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            font-weight: bold;
+            color: #1976d2;
+            white-space: nowrap;
+        }
+
+        #input-field {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #c0c0c0;
+            border-radius: 8px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-wrapper">
+        <h1>Skrivehastighed</h1>
+        <div id="scoreboard">Ord skrevet: <span id="words-count">0</span> &nbsp;|&nbsp; Hastighed: <span id="speed-display">0</span>s</div>
+        <div id="word-container"></div>
+        <input type="text" id="input-field" placeholder="Skriv ordet her…" autocomplete="off" autofocus>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
